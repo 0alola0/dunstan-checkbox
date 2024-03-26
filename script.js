@@ -286,7 +286,7 @@ bannerContainer.innerHTML = `
 
     <div class="checkboxes">
       <div>
-        <input type="checkbox" id="option1" name="option1" />
+        <input type="checkbox" id="option1" name="option1" checked="true" disabled="true" />
         <label for="option1">
           <div class="checkbox">
             <svg
@@ -493,7 +493,7 @@ bannerContainer.innerHTML = `
         </label>
       </div>
       <div>
-        <input type="checkbox" id="option4" name="option4" />
+        <input type="checkbox" id="option4" name="option4"/>
         <label for="option4">
           <div class="checkbox">
             <svg
@@ -569,7 +569,7 @@ bannerContainer.innerHTML = `
     <span class="cta_text"
       >Du kan få: 
       <strong class="cta_result"
-        ><span class="cta_price" id="final_price">0</span> poäng</strong
+        ><span class="cta_price" id="final_price">250</span> poäng</strong
       ></span
     >
     <div class="cta_btn">
@@ -595,21 +595,32 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function initializeBanner() {
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  const finalPrice = document.getElementById("final_price");
-
-  checkboxes.forEach(function (checkbox) {
-    checkbox.addEventListener("change", function () {
-      let sum = 0;
-      checkboxes.forEach(function (cb) {
-        if (cb.checked) {
-          const label = cb.nextElementSibling
-            .querySelector("p")
-            .textContent.trim();
-          sum += parseInt(label);
-        }
+    const checkboxes = document.querySelectorAll('.checkboxes input[type="checkbox"]');
+    const finalPrice = document.getElementById("final_price");
+  
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+  
+        let price = 0;
+        checkboxes.forEach(cb => {
+          if (cb.checked) {
+            price += 250; 
+          }
+        });
+        finalPrice.textContent = price;
+  
+        const checkedCount = document.querySelectorAll('.checkboxes input[type="checkbox"]:checked').length;
+        checkboxes.forEach(cb => {
+          if (checkedCount === 1 && cb.checked) {
+            cb.disabled = true;
+          } else {
+            cb.disabled = false;
+          }
+        });
       });
-      finalPrice.textContent = sum;
     });
-  });
-}
+  }
+  
+  
+  
+  
