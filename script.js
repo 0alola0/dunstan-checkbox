@@ -37,6 +37,10 @@ html {
     gap: 16px;
     padding-bottom: 16px;
   }
+  @media (max-width: 315px) {
+    gap: 20px;
+    padding-bottom: 33px;
+  }
 }
 .image_wrapper {
   background-color: #033934;
@@ -52,6 +56,9 @@ html {
   @media (max-width: 360px) {
     max-height: 70px;
   }
+  @media (max-width: 315px) {
+    max-height: 128px;
+  }
 }
 .display_picture {
   margin: 0;
@@ -63,6 +70,9 @@ html {
   }
   @media (max-width: 360px) {
     max-height: 70px;
+  }
+  @media (max-width: 315px) {
+    max-height: 128px;
   }
   > img {
     width: 100%;
@@ -96,6 +106,11 @@ html {
     text-align: left;
     margin-bottom: 8px;
   }
+  @media (max-width: 315px) {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 19px;
+  }
 }
 .checkboxes {
   display: grid;
@@ -106,6 +121,9 @@ html {
   }
   @media (max-width: 360px) {
     gap: 6px 7px;
+  }
+  @media (max-width: 315px) {
+    gap: 18px 18px;
   }
 }
 input {
@@ -119,6 +137,10 @@ label {
   cursor: pointer;
   @media (max-width: 360px) {
     gap: 7px;
+  }
+  @media (max-width: 315px) {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 label > div {
@@ -134,6 +156,10 @@ label > div {
   @media (max-width: 360px) {
     width: 25px;
     height: 25px;
+  }
+  @media (max-width: 315px) {
+    width: 32px;
+    height: 32px;
   }
 }
 label > div > svg {
@@ -163,6 +189,9 @@ label:hover > div {
   line-height: 21px;
   text-align: left;
   color: #033934;
+  @media (max-width: 315px) {
+    text-align: center;
+  }
 }
 
 .label_text > p {
@@ -171,12 +200,32 @@ label:hover > div {
   line-height: 18px;
   text-align: left;
   margin-block: 0;
+  @media (max-width: 315px) {
+    text-align: center;
+  }
 }
 
 .price_highlight {
   background-color: #efe3ad;
   border-bottom: 2px solid #f3b51b;
   font-style: italic;
+}
+.company_logo2 {
+  display: none;
+  @media (max-width: 340px) {
+    display: block;
+  }
+  @media (max-width: 315px) {
+    display: none;
+  }
+}
+.company_logo1 {
+  @media (max-width: 340px) {
+    display: none;
+  }
+  @media (max-width: 315px) {
+    display: block;
+  }
 }
 
 .banner_cta {
@@ -188,18 +237,26 @@ label:hover > div {
     border-radius: 33px 33px 0px 0px;
     padding-block: 17px 15px;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 340px) {
     border-radius: 0px;
     padding: 13px 13px 9px 13px;
   }
+  @media (max-width: 315px) {
+    border-radius: 10px 10px 0px 0px;
+    padding-block: 16px 10px;
+  }
 }
 .cta_inline {
-  @media (max-width: 320px) {
+  @media (max-width: 340px) {
     display: flex;
     justify-content: center;
     gap: 10px;
     align-items: center;
     margin-bottom: 10px;
+  }
+  @media (max-width: 315px) {
+    display: block;
+    margin-bottom: 24px;
   }
 }
 .cta_text {
@@ -209,7 +266,7 @@ label:hover > div {
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 16px;
-  @media (max-width: 320px) {
+  @media (max-width: 340px) {
     font-size: 12px;
     height: 48px;
     margin-bottom: 0;
@@ -221,7 +278,7 @@ label:hover > div {
   font-size: 19px;
   font-weight: 600;
   margin-bottom: 7px;
-  @media (max-width: 320px) {
+  @media (max-width: 340px) {
     font-size: 16px;
   }
 }
@@ -233,9 +290,13 @@ label:hover > div {
     width: 107px;
     height: 44px;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 340px) {
     width: 62px;
     height: 16px;
+  }
+  @media (max-width: 315px) {
+    width: 107px;
+    height: 44px;
   }
   > img {
     width: 100%;
@@ -256,9 +317,13 @@ label:hover > div {
     font-weight: 600;
     text-decoration: none;
 
-    @media (max-width: 320px) {
+    @media (max-width: 340px) {
       font-size: 12px;
       padding: 10px 0px;
+    }
+    @media (max-width: 315px) {
+      font-size: 14px;
+      padding: 14px 0px;
     }
   }
   @media (max-width: 768px) {
@@ -266,7 +331,7 @@ label:hover > div {
     margin-bottom: 10px;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 340px) {
     width: 100%;
   }
 }
@@ -286,7 +351,13 @@ bannerContainer.innerHTML = `
 
     <div class="checkboxes">
       <div>
-        <input type="checkbox" id="option1" name="option1" checked="true" disabled="true" />
+        <input
+          type="checkbox"
+          id="option1"
+          name="option1"
+          checked="true"
+          disabled="true"
+        />
         <label for="option1">
           <div class="checkbox">
             <svg
@@ -493,7 +564,7 @@ bannerContainer.innerHTML = `
         </label>
       </div>
       <div>
-        <input type="checkbox" id="option4" name="option4"/>
+        <input type="checkbox" id="option4" name="option4" />
         <label for="option4">
           <div class="checkbox">
             <svg
@@ -567,7 +638,7 @@ bannerContainer.innerHTML = `
 <div class="banner_cta">
   <div class="cta_inline">
     <span class="cta_text"
-      >Du kan få: 
+      >Du kan få:
       <strong class="cta_result"
         ><span class="cta_price" id="final_price">250</span> poäng</strong
       ></span
@@ -579,7 +650,10 @@ bannerContainer.innerHTML = `
     </div>
   </div>
 
-  <figure class="company_logo">
+  <figure class="company_logo company_logo1">
+    <img src="img/logo2.svg" alt="" />
+  </figure>
+  <figure class="company_logo company_logo2">
     <img src="img/logo.svg" alt="" />
   </figure>
 </div>
@@ -595,32 +669,31 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function initializeBanner() {
-    const checkboxes = document.querySelectorAll('.checkboxes input[type="checkbox"]');
-    const finalPrice = document.getElementById("final_price");
-  
-    checkboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', function() {
-  
-        let price = 0;
-        checkboxes.forEach(cb => {
-          if (cb.checked) {
-            price += 250; 
-          }
-        });
-        finalPrice.textContent = price;
-  
-        const checkedCount = document.querySelectorAll('.checkboxes input[type="checkbox"]:checked').length;
-        checkboxes.forEach(cb => {
-          if (checkedCount === 1 && cb.checked) {
-            cb.disabled = true;
-          } else {
-            cb.disabled = false;
-          }
-        });
+  const checkboxes = document.querySelectorAll(
+    '.checkboxes input[type="checkbox"]'
+  );
+  const finalPrice = document.getElementById("final_price");
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      let price = 0;
+      checkboxes.forEach((cb) => {
+        if (cb.checked) {
+          price += 250;
+        }
+      });
+      finalPrice.textContent = price;
+
+      const checkedCount = document.querySelectorAll(
+        '.checkboxes input[type="checkbox"]:checked'
+      ).length;
+      checkboxes.forEach((cb) => {
+        if (checkedCount === 1 && cb.checked) {
+          cb.disabled = true;
+        } else {
+          cb.disabled = false;
+        }
       });
     });
-  }
-  
-  
-  
-  
+  });
+}
