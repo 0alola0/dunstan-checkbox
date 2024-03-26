@@ -164,6 +164,7 @@ label > div {
 }
 label > div > svg {
   display: none;
+  margin-top: 4px;
   transition: all 0.2s ease-in;
 }
 
