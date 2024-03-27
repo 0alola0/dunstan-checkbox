@@ -9,7 +9,7 @@ html {
 }
 .banner {
   display: grid;
-  grid-template-columns: 7fr 3fr;
+  grid-template-columns: 7fr 2.6fr;
   max-width: 980px;
   font-family: Poppins;
 
@@ -306,9 +306,10 @@ label:hover > div {
   }
 }
 .cta_btn {
-  background: #f3b51b;
+  background-color: #f3b51b;
   margin-bottom: 15px;
   border-radius: 30px;
+  transition: all 0.2s ease-in;
   > a {
     display: block;
     width: 100%;
@@ -327,6 +328,7 @@ label:hover > div {
       padding: 14px 0px;
     }
   }
+
   @media (max-width: 768px) {
     margin: 0 auto;
     margin-bottom: 10px;
@@ -336,6 +338,10 @@ label:hover > div {
     width: 100%;
   }
 }
+.cta_btn:hover {
+  background-color: #f6cb3c;
+}
+
 `;
 
 const bannerContainer = document.createElement("div");
@@ -357,7 +363,6 @@ bannerContainer.innerHTML = `
           id="option1"
           name="option1"
           checked="true"
-          disabled="true"
         />
         <label for="option1">
           <div class="checkbox">
@@ -368,7 +373,7 @@ bannerContainer.innerHTML = `
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g filter="url(#filter0_d_2186_122)">
+              <g filter="url(#filter0_d_2186_266)">
                 <path
                   d="M21 2L10.5 14L6 9.2"
                   stroke="white"
@@ -380,7 +385,7 @@ bannerContainer.innerHTML = `
               </g>
               <defs>
                 <filter
-                  id="filter0_d_2186_122"
+                  id="filter0_d_2186_266"
                   x="0"
                   y="0"
                   width="27"
@@ -408,12 +413,12 @@ bannerContainer.innerHTML = `
                   <feBlend
                     mode="normal"
                     in2="BackgroundImageFix"
-                    result="effect1_dropShadow_2186_122"
+                    result="effect1_dropShadow_2186_266"
                   />
                   <feBlend
                     mode="normal"
                     in="SourceGraphic"
-                    in2="effect1_dropShadow_2186_122"
+                    in2="effect1_dropShadow_2186_266"
                     result="shape"
                   />
                 </filter>
@@ -422,7 +427,7 @@ bannerContainer.innerHTML = `
           </div>
           <span class="label_text">
             <strong>Gårdsförsäkring</strong>
-            <p>250 p</p>
+            <p>350 p</p>
           </span>
         </label>
       </div>
@@ -437,7 +442,7 @@ bannerContainer.innerHTML = `
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g filter="url(#filter0_d_2186_122)">
+              <g filter="url(#filter0_d_2186_266)">
                 <path
                   d="M21 2L10.5 14L6 9.2"
                   stroke="white"
@@ -449,7 +454,7 @@ bannerContainer.innerHTML = `
               </g>
               <defs>
                 <filter
-                  id="filter0_d_2186_122"
+                  id="filter0_d_2186_266"
                   x="0"
                   y="0"
                   width="27"
@@ -477,12 +482,12 @@ bannerContainer.innerHTML = `
                   <feBlend
                     mode="normal"
                     in2="BackgroundImageFix"
-                    result="effect1_dropShadow_2186_122"
+                    result="effect1_dropShadow_2186_266"
                   />
                   <feBlend
                     mode="normal"
                     in="SourceGraphic"
-                    in2="effect1_dropShadow_2186_122"
+                    in2="effect1_dropShadow_2186_266"
                     result="shape"
                   />
                 </filter>
@@ -506,7 +511,7 @@ bannerContainer.innerHTML = `
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g filter="url(#filter0_d_2186_122)">
+              <g filter="url(#filter0_d_2186_266)">
                 <path
                   d="M21 2L10.5 14L6 9.2"
                   stroke="white"
@@ -518,7 +523,7 @@ bannerContainer.innerHTML = `
               </g>
               <defs>
                 <filter
-                  id="filter0_d_2186_122"
+                  id="filter0_d_2186_266"
                   x="0"
                   y="0"
                   width="27"
@@ -546,12 +551,12 @@ bannerContainer.innerHTML = `
                   <feBlend
                     mode="normal"
                     in2="BackgroundImageFix"
-                    result="effect1_dropShadow_2186_122"
+                    result="effect1_dropShadow_2186_266"
                   />
                   <feBlend
                     mode="normal"
                     in="SourceGraphic"
-                    in2="effect1_dropShadow_2186_122"
+                    in2="effect1_dropShadow_2186_266"
                     result="shape"
                   />
                 </filter>
@@ -560,7 +565,7 @@ bannerContainer.innerHTML = `
           </div>
           <span class="label_text">
             <strong>Brandsläckare</strong>
-            <p>250 p</p>
+            <p>350 p</p>
           </span>
         </label>
       </div>
@@ -575,7 +580,7 @@ bannerContainer.innerHTML = `
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g filter="url(#filter0_d_2186_122)">
+              <g filter="url(#filter0_d_2186_266)">
                 <path
                   d="M21 2L10.5 14L6 9.2"
                   stroke="white"
@@ -587,7 +592,7 @@ bannerContainer.innerHTML = `
               </g>
               <defs>
                 <filter
-                  id="filter0_d_2186_122"
+                  id="filter0_d_2186_266"
                   x="0"
                   y="0"
                   width="27"
@@ -615,12 +620,12 @@ bannerContainer.innerHTML = `
                   <feBlend
                     mode="normal"
                     in2="BackgroundImageFix"
-                    result="effect1_dropShadow_2186_122"
+                    result="effect1_dropShadow_2186_266"
                   />
                   <feBlend
                     mode="normal"
                     in="SourceGraphic"
-                    in2="effect1_dropShadow_2186_122"
+                    in2="effect1_dropShadow_2186_266"
                     result="shape"
                   />
                 </filter>
@@ -629,7 +634,7 @@ bannerContainer.innerHTML = `
           </div>
           <span class="label_text">
             <strong>Åskskydd</strong>
-            <p>250 p</p>
+            <p>290 p</p>
           </span>
         </label>
       </div>
@@ -641,7 +646,7 @@ bannerContainer.innerHTML = `
     <span class="cta_text"
       >Du kan få:
       <strong class="cta_result"
-        ><span class="cta_price" id="final_price">250</span> poäng</strong
+        ><span class="cta_price" id="final_price">350</span> poäng</strong
       ></span
     >
     <div class="cta_btn">
@@ -670,31 +675,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function initializeBanner() {
-  const checkboxes = document.querySelectorAll(
-    '.checkboxes input[type="checkbox"]'
-  );
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
   const finalPrice = document.getElementById("final_price");
 
-  checkboxes.forEach((checkbox) => {
+  checkboxes.forEach(function (checkbox) {
     checkbox.addEventListener("change", function () {
-      let price = 0;
-      checkboxes.forEach((cb) => {
-        if (cb.checked) {
-          price += 250;
-        }
-      });
-      finalPrice.textContent = price;
+      let sum = 0;
 
-      const checkedCount = document.querySelectorAll(
-        '.checkboxes input[type="checkbox"]:checked'
-      ).length;
-      checkboxes.forEach((cb) => {
-        if (checkedCount === 1 && cb.checked) {
-          cb.disabled = true;
-        } else {
-          cb.disabled = false;
+      checkboxes.forEach(function (cb) {
+        if (cb.checked) {
+          const label = cb.nextElementSibling
+            .querySelector("p")
+            .textContent.trim();
+          sum += parseInt(label);
         }
       });
+      finalPrice.textContent = sum;
     });
   });
 }
